@@ -1,2 +1,2 @@
-# Programaci-n-II---2.602--2023
+# Programacion-II-2.602-2023
 INFORMATICA APLICADA UTN INSPT
