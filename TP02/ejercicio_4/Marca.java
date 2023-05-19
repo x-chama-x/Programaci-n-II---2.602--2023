@@ -20,14 +20,7 @@ public class Marca {
     //punto C
     public void mostrarVehiculos(){
         for (Concesionaria c : listaConcesionarias){
-            System.out.println(c);
-            int i = 0;
-            ArrayList<Vehiculo> listaVehiculos = c.getListaVehiculos(); // para poder usar el size()
-            while(i<listaVehiculos.size()){
-                Vehiculo v = listaVehiculos.get(i);
-                System.out.println(v);
-                i++;
-            } 
+            c.mostrarVehiculos();
         }
     }
     
@@ -65,24 +58,22 @@ public class Marca {
     }
     
     // punto F 
-    void cambiarVehiculoDeConcesionaria(String p,Concesionaria x){
-        boolean salir = false;
-        for(int j = 0; j < listaConcesionarias.size(); j++){
-            Concesionaria c = listaConcesionarias.get(j);
-            ArrayList<Vehiculo> listaVehiculos = c.getListaVehiculos();
-            int i = 0;
-            while(i<listaVehiculos.size()){
-                Vehiculo v = listaVehiculos.get(i);
-                if(p.equals(listaVehiculos.get(i).getPatente())){
-                    borrarVehiculo(p);
-                    x.agregarVehiculo(v);
-                    System.out.println("El vehículo con patente " + p + " fue movido de la concesionaria " + c + " a la concesionaria " + x);
-                    i=listaVehiculos.size();
-                    j=listaConcesionarias.size();
-                }
-                i++;
-            } 
-        }    
+    public void cambiarVehiculoDeConcesionaria(String p,Concesionaria x){
+        Vehiculo vEncontrado = eliminarVehiculoPorPatente(p);
+        if (vEncontrado != null) {
+            x.agregarVehiculo( vEncontrado );
+        }
+    }
+
+    private Vehiculo eliminarVehiculoPorPatente(String patente) {
+        Vehiculo vEncontrado = null;
+        int i = 0;
+        while(i < this.listaConcesionarias.size() && vEncontrado == null) {
+            Concesionaria cActual = this.listaConcesionarias.get(i);
+            vEncontrado = cActual.eliminarVehiculoPorPatente(patente);
+            i++;
+        }
+        return vEncontrado;
     }
     
     @Override

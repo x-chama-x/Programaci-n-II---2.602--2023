@@ -14,8 +14,22 @@ class Concesionaria {
     }
     
     // para el punto C
-    public ArrayList<Vehiculo> getListaVehiculos() {
-        return listaVehiculos;
+    public void mostrarVehiculos() {
+        for (Vehiculo v : listaVehiculos){
+            v.mostrar();
+        }
+    }
+
+    public Vehiculo eliminarVehiculoPorPatente(String patente) {
+        Vehiculo vEncontrado = null;
+        int i = 0;
+        while(i < this.listaVehiculos.size() && vEncontrado == null) {
+            if( patente.equals(this.listaVehiculos.get(i).getPatente()) ) {
+                vEncontrado = this.listaVehiculos.remove(i);
+            }
+            i++;
+        }
+        return vEncontrado;
     }
     
     
