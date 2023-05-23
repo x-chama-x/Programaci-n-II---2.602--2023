@@ -22,14 +22,14 @@ class Vehiculo {
         return patente;
     }
     
-    
-    
-    
-    
+    // para el punto C
+    public void mostrar(Vehiculo v) {
+        System.out.println(v);
+    }    
     
     @Override
     public String toString() {
         return "Vehiculo{" + "patente=" + patente + ", precio=$" + precio + '}';
     }
-    
+
 }

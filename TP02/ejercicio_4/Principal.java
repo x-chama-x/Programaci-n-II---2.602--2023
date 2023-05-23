@@ -59,6 +59,7 @@ public class Principal {
         // pruebo si se elimino correctamente de t1
         System.out.println("");
         toyota.mostrarVehiculos();
+        System.out.println("");
         
         // pruebo el metodo cambiarVehiculoDeConcesionaria()
         // muevo Vehiculo{patente=LMP-777, precio=$30500.0}

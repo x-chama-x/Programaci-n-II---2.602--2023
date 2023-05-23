@@ -1,4 +1,3 @@
-
 package ejercicio_4;
 
 import java.util.ArrayList;
@@ -13,14 +12,24 @@ class Concesionaria {
         listaVehiculos = new ArrayList<>();
     }
     
+    //OTROS METODOS
+    
     // para el punto C
     public void mostrarVehiculos() {
         for (Vehiculo v : listaVehiculos){
-            v.mostrar();
+            v.mostrar(v);
         }
     }
 
-    public Vehiculo eliminarVehiculoPorPatente(String patente) {
+    
+    // para el punto D
+    public int obtenerCantidadVehiculos() {
+        return listaVehiculos.size();
+    }    
+        
+  
+    // para el punto E 
+    public Vehiculo ObtenerVehiculoPorPatente(String patente) {
         Vehiculo vEncontrado = null;
         int i = 0;
         while(i < this.listaVehiculos.size() && vEncontrado == null) {
@@ -33,7 +42,6 @@ class Concesionaria {
     }
     
     
-    //OTROS METODOS
     public void agregarVehiculo(Vehiculo vehiculo){
         listaVehiculos.add(vehiculo);
     }
@@ -50,7 +58,5 @@ class Concesionaria {
     public String toString() {
         return "Concesionaria{" + "nombre=" + nombre + '}';
     }
-    
-    
     
 }
