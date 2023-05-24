@@ -14,7 +14,7 @@ class Concesionaria {
     
     //OTROS METODOS
     
-    // para el punto C
+    // Punto B y para el punto C
     public void mostrarVehiculos() {
         for (Vehiculo v : listaVehiculos){
             v.mostrar(v);

@@ -22,7 +22,7 @@ class Vehiculo {
         return patente;
     }
     
-    // para el punto C
+    // para el punto B y C
     public void mostrar(Vehiculo v) {
         System.out.println(v);
     }    
