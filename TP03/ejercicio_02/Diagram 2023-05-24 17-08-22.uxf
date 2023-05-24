@@ -1,0 +1,64 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>340</x><y>130</y><w>280</w><h>160</h></coordinates><panel_attributes>Archivo
+--
+- nombre: String
+- peso: double
+- localizacion: String
+- abierto: boolean
+--
++ Archivo(String, double, String, boolean): void
++ abrir(): void
++ cerrar(): void
++ mover(String): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>350</y><w>230</w><h>130</h></coordinates><panel_attributes>ArchivoMultimedia
+--
+- duracion: int
+- enReproducción: boolean
+--
++ ArchivoMultimedia(int, boolean): void
++ reproducir(): void
++ parar(): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>550</y><w>300</w><h>130</h></coordinates><panel_attributes>ArchivoAudio
+--
+- artista: String
+- album: String
+--
++ ArchivoAudio(FormatoAudio, String, String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>550</y><w>260</w><h>130</h></coordinates><panel_attributes>ArchivoVideo
+--
+- alto: int
+- ancho: int
+--
++ ArchivoVideo(FormatoVideo, int, int): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>140</y><w>210</w><h>130</h></coordinates><panel_attributes>ArchivoTexto
+--
+- codificacion: String
+--
++ ArchivoTexto(String):void
++ cifrar(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>280</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>190</y><w>160</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>470</y><w>150</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>470</y><w>120</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>570</y><w>110</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+FormatoAudio
+--
+_+ _MP3_
+_+_ WAV_
+_+_ AAC_
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>600</y><w>100</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- formato</panel_attributes><additional_attributes>80;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>570</y><w>110</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+FormatoVideo
+--
+_+ _MP4_
+_+_ FLV_
+_+_ MKV_
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>600</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- formato</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>10</y><w>280</w><h>50</h></coordinates><panel_attributes>Computadora
+--
+Computadora(Archivo): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>50</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+m1=0...n
+-archivos</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>
