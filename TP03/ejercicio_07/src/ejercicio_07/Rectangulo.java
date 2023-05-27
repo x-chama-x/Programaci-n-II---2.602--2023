@@ -16,12 +16,14 @@ public class Rectangulo extends Figura {
     }
 
 
+    @Override
     public double area() {
         // El área de un rectángulo se calcula multiplicando la base por la altura
         double area = base * altura;
         return area;
     }
 
+    @Override
     public double perimetro() {
         // El perímetro de un rectángulo se calcula sumando los lados de la base y la altura, y luego multiplicando por 2
         double perimetro = 2 * (base + altura);
