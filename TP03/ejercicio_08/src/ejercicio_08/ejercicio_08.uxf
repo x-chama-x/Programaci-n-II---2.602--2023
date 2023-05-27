@@ -1,0 +1,36 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>350</x><y>257</y><w>240</w><h>150</h></coordinates><panel_attributes>/Empleado/
+--
+- DNI: String
+- nombre: String
+- apellido: String
+- anoIngreso: int
+--
++ Empleado(String,String,String,int): void
+/+ getSalario(): double/
++ mostrarSalarios(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>517</y><w>250</w><h>120</h></coordinates><panel_attributes>EmpleadosSalarioFijo
+--
+- anosEmpresa: int 
+--
++ EmpleadosSalarioFijo(int): void
++ getSalario(): double
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>497</y><w>270</w><h>140</h></coordinates><panel_attributes>EmpleadosAComision
+--
+- nClientes: int
+- monto: double
+
+--
++ EmpleadosAComision(int, double): void
++ getSalario(): double
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>397</y><w>130</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;100</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>397</y><w>100</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>27</y><w>240</w><h>130</h></coordinates><panel_attributes>GrupoDeEmpleados
+--
+
+--
++ GrupoDeEmpleados(): void
++ agregarEmpleado(Empleado): void
++ empleadoConMasClientes():Empleado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>147</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+-empleados</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element></diagram>
