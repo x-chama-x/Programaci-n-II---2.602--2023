@@ -1,0 +1,26 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>200</x><y>230</y><w>250</w><h>120</h></coordinates><panel_attributes>Droide
+--
+- nombre: String
+- droidesRegistrados: ArrayList&lt;Droide&gt;
+--
++ autorepararse(): EstadoReparacion</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>460</y><w>210</w><h>90</h></coordinates><panel_attributes>Pieza
+--
+- nombre: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>340</y><w>130</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- piezasOperativas</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>340</y><w>150</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- piezasNoOperativas</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>230</y><w>250</w><h>120</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EstadoReparacion
+--
++ COMPLETAMENTE_OPERATIVO
++ REPARACION_PARCIAL
++ REPARACION_IMPOSIBLE
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>290</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>40</y><w>250</w><h>110</h></coordinates><panel_attributes>CreadorDroides
+--
+
+--
++ agregarDroide(Droide): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>140</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- droides</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>
