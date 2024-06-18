@@ -1,0 +1,78 @@
+<diagram program="umletino" version="15.1"><zoom_level>13</zoom_level><element><id>UMLClass</id><coordinates><x>13</x><y>0</y><w>442</w><h>169</h></coordinates><panel_attributes>Empresa
+--
+
+--
++ agregarVehiculo(Vehiculo): void
++ mostrarVehiculosMercanciaPeligrosa(ArrayList): void
+- obtenerListado(ArrayList): ArrayList
++ mostrarListado(): void
++ obtenerInforme(): Informe</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>13</x><y>260</y><w>273</w><h>169</h></coordinates><panel_attributes>/Vehiculo/
+--
+- placa: String
+- marca: String
+- modelo: String
+--
++ Vehiculo(String,String,String)
+/+ mostrarManifiesto(): void/
+/+ getUnidadesTransportadas(): int/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>156</y><w>117</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+- vehiculos
+m1=0..n</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>520</y><w>273</w><h>143</h></coordinates><panel_attributes>DeCarga
+--
+- capacidadCarga: double
+--
++ DeCarga()
++ mostrarManifiesto(): void
++ tieneCapacidad(double): boolean
++ asignarCarga(Mercancia): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>416</x><y>247</y><w>273</w><h>169</h></coordinates><panel_attributes>DePasajeros
+--
+- CantAsientos: int
+--
++ DePasajeros()
++ mostrarManifiesto(): void
++ getCantPasajeros(): int
++ tieneCapacidad(): boolean
++ asignarCarga(Pasajero): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>273</x><y>299</y><w>169</w><h>39</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>104</x><y>416</y><w>39</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>767</y><w>286</w><h>143</h></coordinates><panel_attributes>Mercancia
+--
+- descripcion: String
+- peso: double
+- esPeligrosa: boolean
+--
++ Mercancia(String, double, boolean)
++ getPeso(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>117</x><y>650</y><w>130</w><h>143</h></coordinates><panel_attributes>lt=&lt;-
+- mercancias
+m1=0..n</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>832</x><y>260</y><w>273</w><h>143</h></coordinates><panel_attributes>Pasajero
+--
+- nombre: String
+- DNI: String
+- EsmenorDeEdad: boolean
+--
++ Pasajero(String,boolean)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>676</x><y>273</y><w>182</w><h>65</h></coordinates><panel_attributes>lt=&lt;-
+- pasajeros
+m1=0..n</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>403</x><y>715</y><w>273</w><h>143</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Transportable&lt;T&gt;/
+--
+
+--
+/+ asignarCarga(T): void/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>611</y><w>169</w><h>208</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>110;140;60;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>403</x><y>507</y><w>273</w><h>143</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/CapacidadVerificable&lt;T&gt;/
+--
+
+--
+/+ tieneCapacidad(T): boolean/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>546</y><w>169</w><h>52</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>110;20;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>572</x><y>0</y><w>507</w><h>195</h></coordinates><panel_attributes>Informe
+--
+- totalPasajerosTransportados: int
+- totalToneladasMercancia: double
+--
++ Informe(ArrayList&lt;Vehiculo&gt;)
+- setTotalPasajerosTransportados(ArrayList&lt;Vehiculo&gt;): void 
+- setTotalToneladasMercancia(ArrayList&lt;Vehiculo&gt;): void
+- getTotalPasajerosTransportados(ArrayList&lt;Vehiculo&gt;)
+- getTotalToneladasMercancia(ArrayList&lt;Vehiculo&gt;)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>442</x><y>65</y><w>156</w><h>39</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>663</x><y>325</y><w>130</w><h>494</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;360;80;180;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>429</x><y>403</y><w>39</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>
