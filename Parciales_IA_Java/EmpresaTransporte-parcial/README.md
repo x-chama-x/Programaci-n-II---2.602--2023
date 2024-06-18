@@ -20,7 +20,8 @@ Adicionalmente, la empresa requiere las siguientes funcionalidades:
 
 UML
 
-![image](https://github.com/x-chama-x/EmpresaTransporte-parcial/assets/67705754/5302a249-8fa9-437b-8900-e8ac482ac274)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/624e973e-9436-489f-b3c6-775ee020f023)
+
 
 Anotaciones:
 Realicé 2 interfaces ya que manejan distintos tipos datos en cada clase Hija de Vehiculo como en DeCarga que  maneja double y Mercancia.
