@@ -1,7 +1,9 @@
 RECUPERATORIO PARCIAL 2022 JAVA
 
-![enunciado](https://github.com/x-chama-x/Recuperatorio2022-LicenciasDeConducir/assets/67705754/e6ec51b4-4d3e-412f-994d-b59d18dc2812)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/bf751b43-6e8b-456a-b870-235e1ab8203c)
+
 
 Diagrama UML:
 
-![UML](https://github.com/x-chama-x/Recuperatorio2022-LicenciasDeConducir/assets/67705754/0c79c293-94dc-4c48-8cbb-2a6e0c61bc0c)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/adf8a484-4c22-48d3-bec5-d16c99e3c654)
+
