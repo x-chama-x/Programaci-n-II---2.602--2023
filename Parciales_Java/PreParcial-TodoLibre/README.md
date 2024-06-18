@@ -1,5 +1,7 @@
 MODELO DE PARCIAL 2023 JAVA 
 
-![image](https://github.com/x-chama-x/PreParcial-TodoLibre/assets/67705754/e21a50c7-db7f-4d9b-97b0-1d1f2fb68803)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/1d39beb3-b906-4df5-a095-795592f75b6e)
+
 Diagrama UML:
-![Diagram 2024-01-31 20-50-11](https://github.com/x-chama-x/PreParcial-TodoLibre/assets/67705754/4def8cce-2d12-4788-b5c8-2f1526a86d8f)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/9ef2c211-dccd-4b56-b7c1-7f24a1836428)
+
