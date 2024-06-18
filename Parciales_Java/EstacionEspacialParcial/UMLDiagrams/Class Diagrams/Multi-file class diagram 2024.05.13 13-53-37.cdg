@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="EstacionEspacial" package="estacionespacial" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="puntosDeAtraque" type="ArrayList&lt;PuntoAtraque&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarPtoAtraque" returnType="void" visibility="public">
+          <Argument type="PuntoAtraque" name="p"/>
+        </Method>
+        <Method name="mostrarManifiestos" returnType="void" visibility="public"/>
+        <Method name="estacionarNave" returnType="void" visibility="public">
+          <Argument type="Nave" name="n"/>
+        </Method>
+        <Method name="getPuntoDeAtraqueLibre" returnType="PuntoAtraque" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Carga" package="estacionespacial" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="descripcion" type="String" visibility="private"/>
+        <Field name="volumen" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="descripcion"/>
+          <Argument type="double" name="volumen"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVolumen" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="NaveCargo" package="estacionespacial" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="carga" type="Carga" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Carga" name="carga"/>
+          <Argument type="String" name="planetaOrigen"/>
+          <Argument type="int" name="cantMiembrosTripulacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarManifiesto" returnType="void" visibility="public"/>
+        <Method name="puedeEstacionar" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Nave" package="estacionespacial" visibility="public" isAbstract="true" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="planetaOrigen" type="String" visibility="private"/>
+        <Field name="cantMiembrosTripulacion" type="int" visibility="private"/>
+        <Field name="estacionada" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="planetaOrigen"/>
+          <Argument type="int" name="cantMiembrosTripulacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPlanetaOrigen" returnType="String" visibility="public"/>
+        <Method name="getCantMiembrosTripulacion" returnType="int" visibility="public"/>
+        <Method name="isEstacionada" returnType="boolean" visibility="public"/>
+        <Method name="setEstacionada" returnType="void" visibility="public">
+          <Argument type="boolean" name="estacionada"/>
+        </Method>
+        <Method name="mostrarManifiesto" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Interface name="Estacionable" package="estacionespacial" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Methods>
+        <Method name="puedeEstacionar" returnType="boolean" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+    <Class name="NaveCruiser" package="estacionespacial" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="cantPasajeros" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cantPasajeros"/>
+          <Argument type="String" name="planetaOrigen"/>
+          <Argument type="int" name="cantMiembrosTripulacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarManifiesto" returnType="void" visibility="public"/>
+        <Method name="puedeEstacionar" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="estacionespacial" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PuntoAtraque" package="estacionespacial" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="nave" type="Nave" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="estacionarNave" returnType="void" visibility="public">
+          <Argument type="Nave" name="n"/>
+        </Method>
+        <Method name="getNave" returnType="Nave" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="puntosDeAtraque" source="estacionespacial.EstacionEspacial" target="estacionespacial.PuntoAtraque" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;PuntoAtraque&gt;"/>
+    <HasRelation name="carga" source="estacionespacial.NaveCargo" target="estacionespacial.Carga" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="estacionespacial.NaveCruiser" target="estacionespacial.Nave"/>
+    <HasRelation name="nave" source="estacionespacial.PuntoAtraque" target="estacionespacial.Nave" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="estacionespacial.EstacionEspacial" target="estacionespacial.PuntoAtraque" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="estacionespacial.EstacionEspacial" target="estacionespacial.Nave" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="estacionespacial.Nave" target="estacionespacial.Estacionable"/>
+    <IsRelation name="is" source="estacionespacial.NaveCargo" target="estacionespacial.Nave"/>
+    <UseRelation source="estacionespacial.PuntoAtraque" target="estacionespacial.Nave" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
