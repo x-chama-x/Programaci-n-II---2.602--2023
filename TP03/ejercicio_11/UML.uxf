@@ -1,0 +1,48 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>280</x><y>40</y><w>260</w><h>100</h></coordinates><panel_attributes>Uprop
+--
+
+--
++ agregarInmobilarias(Inmobilaria):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>220</y><w>300</w><h>120</h></coordinates><panel_attributes>Inmobiliaria
+--
+- nombre: String
+- correo: String
+- porcentajeComisionPorVenta: double
+--
++ notificarCambioPrecio(double, double): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>420</y><w>280</w><h>170</h></coordinates><panel_attributes>Inmueble
+--
+- superficie: double
+- cantidadAmbientes: int
+- precio: double
+- interesados: ArrayList&lt;Notificable&gt;
+--
++ setPrecio(double): void
++ agregarInteresado(Notificable): void
++ removerInteresado(Notificable): void
++ notificarInteresados(double, double): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>430</y><w>180</w><h>100</h></coordinates><panel_attributes>Domicilio
+--
+- calle: String
+- altura: int
+- comuna: int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>460</y><w>90</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+- dom
+m1=1</panel_attributes><additional_attributes>10;20;70;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>430</y><w>290</w><h>150</h></coordinates><panel_attributes>Cliente
+--
+- apellido: String
+- nombre: String
+- telefono: String
+- correo: String
+--
++ notificarCambioPrecio(double, double): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>210</y><w>270</w><h>120</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Notificable
+--
+--
+/+ notificarCambioPrecio(double, double): void/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>130</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- inmobiliarias
+m1=0..n</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>330</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+- inmuebles
+m1=0..n</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>320</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>270</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element></diagram>
