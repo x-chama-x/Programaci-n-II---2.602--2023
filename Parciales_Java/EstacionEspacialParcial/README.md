@@ -1,11 +1,11 @@
 # EstacionEspacialParcial
 ### ENUNCIADO
-![image](https://github.com/x-chama-x/EstacionEspacialParcial/assets/67705754/23516c10-a51d-4211-a1b2-d485cca7d7c6)
-![image](https://github.com/x-chama-x/EstacionEspacialParcial/assets/67705754/ae00b14c-d5da-4f27-9e2b-7ec1b63807c1)
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dd893beb-7801-45ce-b05f-4d2d64bf0089/e42ee0f6-ad42-4819-afa5-7401dde859a2/Untitled.png)
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/dd893beb-7801-45ce-b05f-4d2d64bf0089/87d6ff4b-cc0a-4f5f-a6e6-aa640a88da97/Untitled.png)
 
 
 UML
-![uml](https://github.com/x-chama-x/EstacionEspacialParcial/assets/67705754/2156c4ad-0d06-43be-9b81-359214b7843d)
+![uml.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/dd893beb-7801-45ce-b05f-4d2d64bf0089/9d3f0e86-3475-41ae-a08f-054c8477ca7d/uml.png)
 
 Notas:
 El método de estacionarNave(nave) de la clase EstacionEspacial solo verifica que haya puntos de atraque sin nave disponibles y llama al método estacionarNave(nave) de la clase PuntoAtraque ya que el punto de atraque es el encargado de estacionar las naves. 
