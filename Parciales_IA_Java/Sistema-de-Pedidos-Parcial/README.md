@@ -21,4 +21,5 @@ Se pide:
 
 UML
 
-![Diagram 2024-04-07 19-50-52](https://github.com/x-chama-x/Sistema-de-Pedidos-Parcial/assets/67705754/ec7734bb-e77a-4d02-a53d-36ac24bba844)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/c0d1de32-99e0-44d6-bce2-a5abff96362f)
+
