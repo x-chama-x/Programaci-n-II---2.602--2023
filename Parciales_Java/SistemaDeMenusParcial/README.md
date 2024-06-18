@@ -1,11 +1,16 @@
 # SistemaDeMenusParcial
 ### ENUNCIADO
-![image](https://github.com/x-chama-x/SistemaDeMenusParcial/assets/67705754/c722f0bd-073d-4dc2-93d5-a55a62f342d6)
-![image](https://github.com/x-chama-x/SistemaDeMenusParcial/assets/67705754/3e8c3190-4ffb-4c81-b083-f7a996cf713c)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/26d5f6ab-7fd3-4d6e-a309-7108bc85dc37)
+
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/82746d7e-cda7-41b3-924e-a0c11e18979d)
+
 
 
 ### UML
 
-![Diagram 2024-06-05 19-06-12](https://github.com/x-chama-x/SistemaDeMenusParcial/assets/67705754/6db13e6b-74a2-436a-8c19-1bc3d50e1a2a)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/04545687-c3f0-4641-8b2f-c3ee82140a5e)
 
+### Correciones a Realizar (hecho)
 
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/1aca385a-4471-4e31-a470-1a6ea29076c1)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/2b5b2c02-2f32-4f18-bde1-5f4a27234820)
