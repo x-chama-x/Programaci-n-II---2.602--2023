@@ -1,14 +1,17 @@
 PARCIAL 2022 JAVA
 
-![ej](https://github.com/x-chama-x/Parcial2022-EfectoInvernadero/assets/67705754/eb0cbc5c-719a-441a-b4f9-e4219cfd13ce)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/4debc101-e2cd-4c78-9d11-4ad30153e8d9)
+
 
 Diagrama UML:
 
-![Untitled](https://github.com/x-chama-x/Parcial2022-EfectoInvernadero/assets/67705754/51c31b6c-8aa0-4d21-b87f-58c8bdc59cf0)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/c99b3b84-8379-4a67-88af-4545c7f7b260)
+
 
 UML FINAL:
 
-![Untitled](https://github.com/x-chama-x/Parcial2022-EfectoInvernadero/assets/67705754/a87651a8-0e89-4bc6-a4a1-f3115721adfa)
+![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/28d80218-7484-4568-b6e7-ce08eb86220d)
+
 
 ### La clase `Area` la estoy definiendo como abstracta por las siguientes razones:
 
