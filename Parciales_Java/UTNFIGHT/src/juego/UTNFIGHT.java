@@ -10,16 +10,10 @@ public class UTNFIGHT {
         jugadores = new ArrayList<>();
     }
 
-    private Resumen getResumenDePartidas(String ID) {
-        Jugador jugador = buscarJugadorPorID(ID);
-        Resumen resumen = new Resumen(jugador);
-        return resumen;
-    }
-
     public void mostrarResumenDePartidas() {
         for (Jugador jugador : jugadores) {
-            Resumen resumen = getResumenDePartidas(jugador.getID());
-            resumen.mostrarResumen();
+            
+            System.out.println( jugador.getID() + ": " + jugador.getResumenDePartidas() );
         }
     }
 
@@ -38,18 +32,22 @@ public class UTNFIGHT {
         return retorno;
     }
 
-    public boolean batallar(String ID1, String ID2){
+    public boolean batallar(String ID1, String ID2) {
         boolean sePudoBatallar = false;
         Jugador j1 = buscarJugadorPorID(ID1);
-        Jugador j2 = buscarJugadorPorID(ID2);
-
-        if (sonJugadoresValidos(j1, j2)) {
-            Batalla b = new Batalla();
-            b.agregarParticipante(j1);
-            b.agregarParticipante(j2);
-            sePudoBatallar = b.iniciarBatalla();
+        if (j1 != null) {
+            Jugador j2 = buscarJugadorPorID(ID2); // Solo buscar a j2 si j1 fue encontrado
+            if (sonJugadoresValidos(j1, j2)) {
+                sePudoBatallar = batallar(j1, j2);
+            }
         }
         return sePudoBatallar;
+    }
+    
+    public boolean batallar(Jugador j1, Jugador j2) {
+        Batalla b = new Batalla(j1, j2);
+        b.iniciar();
+        return true;
     }
 
     private boolean sonJugadoresValidos(Jugador jugador1, Jugador jugador2) {
@@ -64,8 +62,18 @@ public class UTNFIGHT {
         }
     }
 
-    public void añadirJugador(Jugador jugador) {
+    public void agregarJugador(Jugador jugador) {
         jugadores.add(jugador);
+    }
+    
+    public void arrancarBatallas() {        
+        for (int i = 0; i < jugadores.size() - 1; i++) {
+            Jugador actual = jugadores.get(i);
+            for (int j = i+1; j < jugadores.size(); j++) {
+                Jugador rival = jugadores.get(j);
+                batallar(actual, rival);
+            }            
+        }
     }
 
 }

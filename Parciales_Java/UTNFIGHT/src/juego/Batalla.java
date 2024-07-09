@@ -4,30 +4,38 @@ import java.util.ArrayList;
 
 public class Batalla {
     private ArrayList<Jugador> participantes;
+    private int ronda;
 
-    public Batalla() {
+    public Batalla(Jugador j1, Jugador j2) {
         this.participantes = new ArrayList<>();
+        agregarParticipante(j1);
+        agregarParticipante(j2);
+        this.ronda = 0;
     }
 
     public void agregarParticipante(Jugador j) {
         participantes.add(j);
     }
+    
 
-    public boolean iniciarBatalla(){
-        boolean sePudoBatallar = false;
-        Personaje p1 = participantes.get(0).getPersonajeFavorito();
-        Personaje p2 = participantes.get(1).getPersonajeFavorito();
-        while (ambosPersonajesVivos(p1, p2)) {
-            realizarTurno(p1, p2);
-            if (ambosPersonajesVivos(p1, p2)) {
-                realizarTurno(p2, p1);
-            }
+    public void iniciar(){
+        Jugador jAtacante = participantes.get(0);
+        Jugador jDefensor = participantes.get(1);
+
+        jDefensor.defensa(jAtacante.ataque());
+        
+        while (jDefensor.getPersonajeFavorito().estaVivo()) {
+            
+            Jugador aux = jAtacante;
+            jAtacante = jDefensor;
+            jDefensor = aux;
+
+            jDefensor.defensa(jAtacante.ataque());
+
         }
-        Resultado resultado = determinarResultado(p1, p2);
-        actualizarPartidas(participantes.get(0), participantes.get(1), resultado);
+        System.out.println("Gano " + jAtacante + " y perdio " + jDefensor);
         reiniciarPuntosVida(participantes);
-        sePudoBatallar = true;
-        return sePudoBatallar;
+        actualizarPartidas(jAtacante, jDefensor);
     }
 
     private boolean ambosPersonajesVivos(Personaje p1, Personaje p2){
@@ -45,21 +53,19 @@ public class Batalla {
             resultado = Resultado.EMPATE;
         } else if (p1.getPuntosVida() <= 0) {
             resultado = Resultado.DERROTA;
-        } else if (p2.getPuntosVida() <= 0) {
+        } else {
             resultado = Resultado.VICTORIA;
         }
         return resultado;
     }
 
-    private void actualizarPartidas(Jugador j1, Jugador j2, Resultado resultado){
-        Partida p1 = new Partida(j2, resultado);
-        Partida p2 = new Partida(j1, invertirResultado(resultado));
-        j1.añadirPartida(p1);
-        j2.añadirPartida(p2);
+    private void actualizarPartidas(Jugador jGanador, Jugador jPerdedor){
+        jGanador.añadirPartida( new Partida(jPerdedor, Resultado.VICTORIA) );
+        jPerdedor.añadirPartida( new Partida(jGanador, Resultado.DERROTA) );
     }
 
     private Resultado invertirResultado(Resultado resultado){
-        Resultado retorno = null;
+        Resultado retorno;
         if (resultado == Resultado.VICTORIA) {
             retorno = Resultado.DERROTA;
         } else if (resultado == Resultado.DERROTA) {
@@ -72,7 +78,7 @@ public class Batalla {
 
     private void reiniciarPuntosVida(ArrayList<Jugador> participantes){
         for (Jugador j : participantes) {
-            j.getPersonajeFavorito().setPuntosVida(100);
+            j.getPersonajeFavorito().reiniciar();
         }
     }
 }

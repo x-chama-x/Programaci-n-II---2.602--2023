@@ -1,34 +1,21 @@
 package juego;
 
 public class Resumen {
+    
+    private int victorias;
+    private int empates;
+    private int derrotas;
 
-    private Jugador jugador;
-
-    public Resumen(Jugador jugador) {
-        this.jugador = jugador;
-        setCantTriunfos();
-        setCantDerrotas();
-        setCantEmpates();
+    public Resumen(int[] contadores) {
+        this.victorias = contadores[0];
+        this.empates = contadores[1];
+        this.derrotas = contadores[2];
     }
 
-    private void setCantTriunfos() {
-        jugador.getCantTriunfos();
+    @Override
+    public String toString() {
+        return "Resumen{" + "victorias=" + victorias + ", empates=" + empates + ", derrotas=" + derrotas + '}';
     }
-
-    private void setCantDerrotas() {
-        jugador.getCantDerrotas();
-    }
-
-    private void setCantEmpates() {
-        jugador.getCantEmpates();
-    }
-
-    public void mostrarResumen() {
-        System.out.println("El jugador " + jugador.getID() + " tiene " + jugador.getCantTriunfos() + " triunfos, " + jugador.getCantDerrotas() + " derrotas y " + jugador.getCantEmpates() + " empates.");
-    }
-
-
-
-
-
+    
+    
 }

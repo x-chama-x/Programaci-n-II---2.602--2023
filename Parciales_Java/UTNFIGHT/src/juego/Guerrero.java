@@ -12,7 +12,9 @@ public class Guerrero extends Personaje {
     }
 
     public double ataque() {
-        int vidaPorDebajoDe = 20;
+        int vidaInicial = 100;
+        double porcentajeVidaCritica = 0.2; // 20% de la vida inicial como punto crítico
+        double vidaPorDebajoDe = vidaInicial * porcentajeVidaCritica;
         double incrementoFuerza = 0.1;
         if (getPuntosVida() < vidaPorDebajoDe) {
             fuerza += fuerza * incrementoFuerza; // Incrementa la fuerza en un 10%

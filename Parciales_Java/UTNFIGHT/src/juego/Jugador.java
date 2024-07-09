@@ -18,29 +18,26 @@ public class Jugador {
         return ID;
     }
 
-    private int getCantidadPorResultado(Resultado resultadoBuscado) {
-        int contador = 0;
+    public Resumen getResumenDePartidas() {
+        int[] cantsPorResultado = new int[Resultado.values().length];        
         for (Partida partida : partidasJugadas) {
-            if (partida.getResultado() == resultadoBuscado) {
-                contador++;
-            }
+            int idx = partida.getResultado().ordinal();
+            cantsPorResultado[idx]++;
         }
-        return contador;
+        return new Resumen(cantsPorResultado);
     }
 
-    public int getCantTriunfos() {
-        return getCantidadPorResultado(Resultado.VICTORIA);
+    // atacar con el personaje favorito
+    public double ataque() {
+        return personajeFavorito.ataque();
     }
 
-    public int getCantDerrotas() {
-        return getCantidadPorResultado(Resultado.DERROTA);
+    // defensa con el personaje favorito
+    public void defensa(double ataque) {
+        personajeFavorito.defensa(ataque);
     }
 
-    public int getCantEmpates() {
-        return getCantidadPorResultado(Resultado.EMPATE);
-    }
 
-    // obtener el personaje favorito
     public Personaje getPersonajeFavorito() {
         return personajeFavorito;
     }
@@ -48,4 +45,11 @@ public class Jugador {
     public void añadirPartida(Partida partida) {
         partidasJugadas.add(partida);
     }
+
+    @Override
+    public String toString() {
+        return "Jugador{" + "ID=" + ID + '}';
+    }
+    
+    
 }

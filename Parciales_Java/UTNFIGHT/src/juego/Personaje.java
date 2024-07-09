@@ -4,12 +4,14 @@ import java.util.Random;
 
 public abstract class Personaje implements Atacable, Defendible {
 
+    private static final int VIDA_INICIAL = 100;
     private String nombre;
     private double puntosVida;
+    
 
     public Personaje(String nombre) {
         this.nombre = nombre;
-        this.puntosVida = 100; // Puntos de vida por defecto
+        reiniciar();
     }
 
     public double getPuntosVida() {
@@ -25,6 +27,7 @@ public abstract class Personaje implements Atacable, Defendible {
         double danioEsquivado = calcularDanioEsquivado(ataque);
         actualizarPuntosVida(danioEsquivado);
     }
+    
     private double calcularDanioEsquivado(double ataque) {
         Random rand = new Random();
         double esquivar = rand.nextDouble();
@@ -32,5 +35,13 @@ public abstract class Personaje implements Atacable, Defendible {
     }
     private void actualizarPuntosVida(double danioEsquivado) {
         setPuntosVida(getPuntosVida() - danioEsquivado);
+    }
+    
+    public boolean estaVivo() {
+        return this.getPuntosVida() > 0;
+    }
+    
+    public void reiniciar() {
+        this.puntosVida = VIDA_INICIAL;
     }
 }
