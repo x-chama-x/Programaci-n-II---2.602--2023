@@ -1,0 +1,46 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>20</y><w>270</w><h>100</h></coordinates><panel_attributes>SistemaRecaudacion
+--
+
+--
++ inscribir(String, String, String): void
++ gananciaPorMateria(): ArrayList&lt;double&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>190</y><w>210</w><h>100</h></coordinates><panel_attributes>Carrera
+--
+- nombre: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>110</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- carrera</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>190</y><w>210</w><h>100</h></coordinates><panel_attributes>Materia
+--
+- codigo: String
+- nombre: String
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>230</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- materias</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>380</y><w>210</w><h>120</h></coordinates><panel_attributes>Alumno
+--
+- DNI: String
+- nombre: String
+_+ MONTO_FIJO: int = 95000_
+
+--
+ + calcularCuota(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>280</y><w>140</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- alumnosInscriptos</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>280</y><w>140</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- materiasCursando</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>560</y><w>210</w><h>100</h></coordinates><panel_attributes>AlumnoConBeca
+--
+- porcentajeBeca: double
+
+--
++ calcularCuota(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>590</x><y>560</y><w>210</w><h>100</h></coordinates><panel_attributes>AlumnoMayor
+--
+- edad: int
+
+--
++ calcularCuota(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>490</y><w>200</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;70</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>490</y><w>150</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;70</additional_attributes></element></diagram>
