@@ -1,12 +1,13 @@
-# Parcial 2024 “juego UTNFIGHT”
+# Recuperatorio Parcial 2024 “Sistema de recaudacion para universidad privada”
 
-![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/57556082-f5e4-452d-be9e-1c90f58dec60)
-![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/e635f6f4-40be-4184-ae59-d3caa48c32e3)
+![image](https://github.com/user-attachments/assets/4c853f47-c16b-451e-9118-b870f0aa1241)
+
 
 
 
 ### UML
 
-![image](https://github.com/x-chama-x/Programacion-II-2.602-2023/assets/67705754/88d17635-7487-4313-9396-4c0ef8be4dd2)
+![image](https://github.com/user-attachments/assets/8be240a7-ab6d-4746-925b-03f26e5c3a3c)
+
 
 
