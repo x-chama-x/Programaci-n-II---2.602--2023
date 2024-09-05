@@ -39,7 +39,3 @@ Este servlet maneja las solicitudes POST enviadas desde el formulario. Realiza l
 - Java 11 o superior
 - Maven 3.6.0 o superior
 - Servidor de aplicaciones compatible con Jakarta EE 9 o superior
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
