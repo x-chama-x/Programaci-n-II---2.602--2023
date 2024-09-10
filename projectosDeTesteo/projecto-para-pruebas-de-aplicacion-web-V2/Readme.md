@@ -11,7 +11,7 @@ Este proyecto es una aplicación web simple desarrollada en Java utilizando el f
 
 ## Descripción de Archivos
 
-### `index.html`
+### `index.html` (no se usa en esta nueva versión)
 
 Este archivo contiene un formulario HTML que solicita al usuario su nombre, apellido y color favorito. El formulario se envía mediante el método POST a la URL `/saludar`.
 
