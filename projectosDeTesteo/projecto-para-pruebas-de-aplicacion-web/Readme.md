@@ -1,4 +1,4 @@
-# Proyecto de Pruebas de Aplicación Web
+# Proyecto de Pruebas de Aplicación Web (sin usar tecnología JSP)
 
 Este proyecto es una aplicación web simple desarrollada en Java utilizando el framework de servlets de Jakarta EE. La aplicación permite a los usuarios enviar un formulario con su nombre, apellido y color favorito, y luego muestra un saludo personalizado con el color favorito del usuario.
 
